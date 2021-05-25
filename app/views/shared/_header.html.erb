@@ -1,0 +1,23 @@
+<%# CSS・・・assets/stylesheets/shared/header.css %>
+<header class='top-page-header'>
+  <div class='search-bar-contents'>
+    <%= link_to image_tag("Cockta -logo.png", class:"cocktail-icon"), "/" %>
+      <form class="search-form" action="#">
+        <input class='input-box' placeholder='例）甘口 弱め'>
+        <button class="search-button">
+          検索
+        </button>
+    </form>
+  </div>
+  <div class='nav'>
+    <ul class='lists-left'>
+      <li><%= link_to 'ホーム', "ホーム", class: "category-list" %></li>
+      <li><%= link_to 'レシピ一覧', "#", class: "brand-list" %></li>
+      <li><%= link_to '用語', "#", class: "brand-list" %></li>
+      <li><%= link_to '材料', "#", class: "brand-list" %></li>
+      <li><%= link_to '参考資料', "#", class: "brand-list" %></li>
+    </ul>
+    <ul class='lists-right'>
+    </ul>
+  </div>
+</header>
