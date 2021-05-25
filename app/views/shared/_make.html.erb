@@ -1,0 +1,149 @@
+<div class="uk-section-secondary uk-section-search uk-background-cover uk-padding-small uk-margin-bottom" style="background-image: url(/assets/samp.png);">
+    <form id="form1" action="/cocktails" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="✓">
+
+    <div class="uk-child-width-1-4@m uk-grid-match uk-grid-small uk-grid uk-grid-stack" uk-grid="">
+        <div class="uk-first-column">
+            <label class="cocktail">カクテル名・材料・説明文</label>
+            <div class="uk-form-controls">
+                <input type="text" name="word" id="word" class="cocktail-input" placeholder="例）甘口  弱め">
+            </div>
+        </div>
+    </div>
+
+    <div class="bar" uk-grid="">
+
+        <div uk-tooltip="title: カクテルの味の基礎となるお酒; pos: top" title="" aria-expanded="false" class="uk-first-column">
+            <label class="uk-form-label" for="base_id_ベース">ベース</label>
+            <select name="base_id" id="base_id" class="pul"><option value="" label=" "></option><option value="1">ジン</option>
+              <option value="2">ウォッカ</option>
+              <option value="3">テキーラ</option>
+              <option value="4">ラム</option>
+              <option value="5">ウイスキー</option>
+              <option value="6">ブランデー</option>
+              <option value="7">リキュール</option>
+              <option value="8">ワイン</option>
+              <option value="9">ビール</option>
+              <option value="10">日本酒</option>
+              <option value="0">ノンアルコール</option>
+            </select>
+        </div>
+        <div uk-tooltip="title: カクテルの作り方の種類。詳しくはカクテル用語で。; pos: top" title="" aria-expanded="false">
+            <label class="uk-form-label" for="technique_id_技法">技法</label>
+            <select name="technique_id" id="technique_id" class="pul "><option value="" label=" "></option><option value="1">ビルド</option>
+              <option value="2">ステア</option>
+              <option value="3">シェイク</option>
+              <option value="4">ブレンド</option>
+            </select>
+        </div>
+        <div uk-tooltip="title: カクテルの味わい。甘口は比較的度数が低く飲みやすい。辛口は度数が高めの上級者向け。; pos: top" title="" aria-expanded="false">
+            <label class="uk-form-label" for="taste_id_味わい">味わい</label>
+            <select name="taste_id" id="taste_id" class="pul "><option value="" label=" "></option><option value="1">甘口</option>
+              <option value="2">中甘口</option>
+              <option value="3">中口</option>
+              <option value="4">中辛口</option>
+              <option value="5">辛口</option>
+              <option value="6">フルーティー</option>
+              <option value="7">すっきり</option>
+            </select>
+        </div>
+        <div uk-tooltip="title: 早めに飲むことを推奨されるショートと、ゆっくり飲めるロング。; pos: top" title="" aria-expanded="false">
+            <label class="uk-form-label" for="style_id_スタイル">スタイル</label>
+            <select name="style_id" id="style_id" class="pul"><option value="" label=" "></option><option value="1">ショート</option>
+              <option value="2">ロング</option>
+            </select>
+        </div>
+        <div uk-tooltip="title: カクテルの度数; pos: top" title="" aria-expanded="false" class="uk-grid-margin uk-first-column">
+            <label class="uk-form-label" for="alcohol_度数">度数</label>
+
+            <select name="alcohol" id="alcohol" class="pul"><option value="" label=" "></option><option value="from: 0, to: 0">ノンアルコール</option>
+              <option value="from: 1, to: 10">1～10（弱め）</option>
+              <option value="from: 11, to: 20">11～20（普通）</option>
+              <option value="from: 21, to: 30">21～30（やや強い）</option>
+              <option value="from: 31, to: 40">31～40（強い）</option>
+              <option value="from: 41, to: 100">41～（とても強い）</option>
+            </select>
+        </div>
+        <div uk-tooltip="title: カクテルを飲むおすすめのタイミング。オールは食前から食後までいつでもおすすめ。; pos: top" title="" aria-expanded="false" class="uk-grid-margin">
+            <label class="uk-form-label" for="top_id_TOP">フルーツ</label>
+            <select name="top_id" id="top_id" class="pul"><option value="" label=" "></option><option value="1">イチゴ</option>
+              <option value="2">バナナ</option>
+              <option value="3">パイナップル</option>
+            </select>
+        </div>
+        <div uk-tooltip="title: カクテルを注ぐおすすめのグラス。レシピでFullUPとしているカクテルはグラスのサイズで分量が計算されているので守るようにしよう。; pos: top" title="" aria-expanded="false" class="uk-grid-margin">
+            <label class="uk-form-label" for="glass_id_グラス">グラス</label>
+            <select name="glass_id" id="glass_id" class="pul"><option value="" label=" "></option><option value="1">カクテルグラス</option>
+              <option value="2">オールドファッションドグラス</option>
+              <option value="3">コリンズグラス</option>
+              <option value="4">タンブラー</option>
+              <option value="5">ワイングラス</option>
+              <option value="6">シャンパングラス</option>
+              <option value="7">ホットグラス</option>
+              <option value="8">ゴブレット</option>
+              <option value="9">リキュールグラス</option>
+              <option value="10">サワーグラス</option>
+              <option value="11">ピルスナーグラス</option>
+              <option value="12">ショットグラス</option>
+            </select>
+        </div>
+        <div uk-tooltip="title: カクテルの色; pos: top" title="" aria-expanded="false" class="uk-grid-margin">
+            <label class="uk-form-label" for="color_id_色">色</label>
+            <select name="color_id" id="color_id" class="pul"><option value="" label=" "></option><option value="1">透明</option>
+              <option value="2">赤</option>
+              <option value="3">青</option>
+              <option value="4">黄</option>
+              <option value="5">茶色</option>
+              <option value="6">緑</option>
+              <option value="7">オレンジ</option>
+              <option value="8">白</option>
+              <option value="9">黄金色</option>
+              <option value="10">黒</option>
+              <option value="11">ピンク</option>
+              <option value="12">複数色</option>
+            </select>
+        </div>
+        <div uk-tooltip="title: カクテルの特徴でタグ付け; pos: top" title="" aria-expanded="false" class="uk-grid-margin uk-first-column">
+            <label class="uk-form-label" for="tag_id_特徴">特徴</label>
+            <select name="tag_id" id="tag_id" class="pul"><option value="" label=" "></option><option value="1">スタンダード</option>
+              <option value="2">オリジナル</option>
+              <option value="3">シンプル</option>
+              <option value="4">さっぱり</option>
+              <option value="5">爽やか</option>
+              <option value="6">まろやか</option>
+              <option value="7">キレがある</option>
+              <option value="8">酸っぱい</option>
+              <option value="9">濃厚</option>
+              <option value="10">強い</option>
+              <option value="11">飲みやすい</option>
+              <option value="12">酔い醒まし</option>
+              <option value="13">楽しい</option>
+              <option value="14">美しい</option>
+              <option value="15">ホット</option>
+              <option value="16">トロピカル</option>
+              <option value="17">おしゃれ</option>
+              <option value="18">男らしい</option>
+              <option value="19">女性におすすめ</option>
+              <option value="20">歴史ある</option>
+              <option value="21">プース・カフェ</option>
+              <option value="22">料理に合う</option>
+            </select>
+        </div>
+
+    </div>
+
+    <input type="checkbox" name="photo_mode" id="photo_mode" style="display:none">
+
+    <input type="hidden" name="page" id="page">
+
+    <div class="uk-flex uk-flex-center uk-margin-small">
+
+        <div class="aaa">
+            <input type="submit" value="検索" class="search" data-disable-with="検索">
+        </div>
+
+    </div>
+
+    
+
+</form>
+</div>
